@@ -42,3 +42,61 @@ else{
     }
     console.log(b)
 }
+
+
+// Question 4
+let n = 100;
+let count = 0;
+let i = 2;
+while(i<=100){
+    process.stdout.write(i + " ");
+    count++;
+    i = i + count*4;
+}
+
+
+// Question 5
+let n = 123456789;
+let count = 0;
+while (n > 0){
+    res = (n - n%10)/10;
+    count++;
+    n = res;
+}
+console.log(count);
+
+
+// Question 6
+let n = 9735;
+let res = 0;
+
+while(n > 0){
+    res = res*10 + (n%10);
+    n = (n - n%10)/10;
+}
+console.log(res);
+
+
+// Question 6
+let n = 9735;
+let res = 0;
+
+while(n > 0){
+    res = res*10 + (n%10);
+    n = (n - n%10)/10;
+}
+console.log(res);
+
+
+// Question 7 a
+let n = 5;
+let row = 1;
+while (row<=5){
+    col = 1;
+    while(col <= row){
+        process.stdout.write("* ");
+        col++;
+    }
+    process.stdout.write("\n");
+    row ++;
+}
