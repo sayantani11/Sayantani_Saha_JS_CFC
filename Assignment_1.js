@@ -114,6 +114,62 @@ while(i<=n){
     process.stdout.write("\n")
 }
 
+// Question 7c
+let n = 5;
+let row = 1;
+
+while(row <= n){
+    col = 0;
+    colMirror = 1;
+
+    while(colMirror <= 2*n - 1){
+        if(colMirror>= n-row+1 && colMirror <= n){
+            col++;
+            process.stdout.write(col + " ");
+        }
+        else if(colMirror <= n+row-1 && colMirror > n){
+            col--;
+            process.stdout.write(col + " ");
+        }
+        else{
+            process.stdout.write("  ");
+        }
+        colMirror++;
+    }
+    process.stdout.write("\n")
+    row++;
+}
+
+//Question 7d
+let n = 5;
+let row = 1;
+
+while(row <= n){
+    col = row;
+    colMirror = 1;
+
+    while(colMirror <= 2*n - 1){
+        if(colMirror>= n-row+1 && colMirror <= n){
+            process.stdout.write(col + " ");
+            col++;
+
+            if(colMirror == n){
+                col--;
+            }
+        }
+        else if(colMirror <= n+row-1 && colMirror > n){
+            col--;
+            process.stdout.write(col + " ");
+        }
+        else{
+            process.stdout.write("  ");
+        }
+        colMirror++;
+    }
+    process.stdout.write("\n")
+    row++;
+}
+
 //Question 7f
 let n = 5
 let row = 0
