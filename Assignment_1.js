@@ -202,6 +202,33 @@ while(rowMirror< 2*n-1){
     rowMirror++
 }
 
+//Question 7g
+let n=5;
+let row = 0;
+let rowMirror = 1;
+
+while(rowMirror < 2*n){
+    let col = 0;
+
+    while(col <= 2*n){
+        if(col <= row || col >= 2*n -row){
+            process.stdout.write(" *");
+        }
+        else{
+            process.stdout.write("  ");
+        }
+        col++;
+    }
+    console.log("")
+    if(rowMirror < n){
+        row++;
+    }
+    else{
+        row--;
+    }
+    rowMirror++;
+}
+
 //Question 7 h
 let n = 5
 let row = 0
