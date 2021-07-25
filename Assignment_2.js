@@ -140,3 +140,102 @@ function count5(arr){
     return count;
 }
 
+
+// Question 9
+
+function checkPrime(arr){
+    let count = 0;
+
+    for(num in arr){
+        if(num < 2){
+            count++;
+        }
+
+        else{
+            let i=2;
+            while(i< num**0.5){
+                if(num%i == 0){
+                    count++;
+                    break;
+                }
+                i+=1
+            }
+        }
+    }
+    return (arr.length - count);
+}
+
+
+// Question 10
+
+function isSorted(arr){
+    for(let i=0; i<arr.length-1; i++){
+        if(arr[i] > arr[i+1]){
+            return false;
+        }
+    }
+    return true;
+}
+
+
+// Question 11
+
+function zerosOnes(arr){
+    start = 0;
+    end = arr.length - 1;
+
+    while(start <= end){
+        if(arr[start]==1 && arr[end]==0){
+            [arr[start], arr[end]] = [arr[end], arr[start]];
+            start +=1;
+            end -=1;
+        }
+
+        else if(arr[start]!=1 && arr[end]==0){
+            start += 1;
+        }
+
+        else if(arr[start]==1 && arr[end]!=0){
+            end -=1;
+        }
+
+        else{
+            start += 1;
+            end -=1;
+        }
+    }
+    return arr;
+}
+
+
+// Question 12
+
+function oddEven(arr){
+    let odd = []
+    let even = []
+
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]%2 == 0){
+            even.push(arr[i]);
+        }
+        else{
+            odd.push(arr[i]);
+        }
+    }
+    return even.concat(odd);
+}
+
+
+// Question 13
+
+function reverse(arr){
+    start = 0;
+    end = arr.length - 1;
+
+    while(start <= end){
+        [arr[start], arr[end]] = [arr[end], arr[start]];
+        start += 1;
+        end -=1;
+    }
+    return arr;
+}
