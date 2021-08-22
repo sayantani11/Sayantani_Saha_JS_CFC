@@ -24,7 +24,7 @@ function targetIdx(arr, target, index){
 
 // Question 4
 function arrofIdx(arr, target, index=0){
-    idx = [];
+    let idx = [];
     
     if(index == arr.length - 1){
         return idx;
@@ -48,3 +48,30 @@ function reverse(arr, start, end){
     reverse(arr, start+1, end-1);
 }
 
+
+// Question 6
+function inverse(arr,index = 0){
+    let ans = [];
+    if(index == arr.length){
+        return "".join(ans);
+    }
+
+    let idx = arr[index];
+    ans[idx-1] = index+1;
+
+    inverse(arr, index+1);
+}
+
+
+// Question 7
+function BubbleSort(arr, idx=0){
+    if(idx == arr.length-1){
+        return;
+    }
+
+    if(arr[idx] > arr[idx+1]){
+        [arr[idx], arr[idx+1]] = [arr[idx+1], arr[idx]];
+        idx = 0;
+    }
+    BubbleSort(arr, idx+1);
+}
